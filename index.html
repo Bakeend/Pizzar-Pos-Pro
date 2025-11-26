@@ -1,33 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizza POS Pro</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'brand-red': '#E53935',
-              'brand-yellow': '#FFB300',
-              'brand-green': '#43A047',
-              'brand-dark': '#212121',
-              'brand-light': '#F5F5F5',
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza POS Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-red': '#E53935',
+            'brand-yellow': '#FFB300',
+            'brand-green': '#43A047',
+            'brand-dark': '#212121',
+            'brand-light': '#F5F5F5',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
           },
         },
-      }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@700&display=swap"
+    rel="stylesheet">
+
+  <!-- Meta tags de segurança -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#E53935">
+
   <script type="importmap">
 {
   "imports": {
@@ -42,9 +49,14 @@
   }
 }
 </script>
+  <!-- Estilos globais -->
+  <link rel="stylesheet" href="/global.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>

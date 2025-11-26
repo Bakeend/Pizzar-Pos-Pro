@@ -1,0 +1,105 @@
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Esconder elementos indesejados que podem ser injetados por extensões */
+[class*="reloaded"],
+[class*="ppl"],
+[class*="ao-vivo"],
+[class*="bastard"],
+div[style*="position: fixed"][style*="z-index: 999"],
+div[style*="position: fixed"][style*="z-index: 9999"],
+div[style*="position: absolute"][style*="top: 0"][style*="left: 0"]:not([class*="hero"]):not([class*="banner"]):not([class*="background"]) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Garantir que overlays de terceiros fiquem escondidos */
+iframe:not([src*="youtube"]):not([src*="google"]):not([src*="maps"]) {
+    display: none !important;
+}
+
+/* Esconder elementos suspeitos no canto superior esquerdo */
+body>div:first-child:not(#root):not([id]):not([class]) {
+    display: none !important;
+}
+
+/* Prevenir elementos flutuantes indesejados */
+body>*:not(#root) {
+    position: relative !important;
+}
+
+/* Estilos para scrollbar customizada */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Classe para esconder scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Animações suaves */
+.animate-in {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Transições suaves para elementos interativos */
+button,
+a,
+input,
+select,
+textarea {
+    transition: all 0.3s ease;
+}
+
+/* Garantir que o root tenha z-index apropriado */
+#root {
+    position: relative;
+    z-index: 1;
+}
+
+/* Esconder elementos de debug/dev tools */
+[class*="debug"],
+[class*="dev-tools"],
+[class*="inspector"],
+[id*="debug"],
+[id*="dev-tools"] {
+    display: none !important;
+}
